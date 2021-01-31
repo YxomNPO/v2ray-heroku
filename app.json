@@ -1,14 +1,14 @@
 {
-    "name": "V2Ray",
-    "description": "Deploy V2ray on Heroku.",
-    "keywords": ["V2Ray"],
+    "name": "Xray",
+    "description": "Deploy Xray on Heroku.",
+    "keywords": ["Xray"],
     "env": {
         "UUID": {
-            "description": "V2Ray UUID",
-            "value": "ad806487-2d26-4636-98b6-ab85cc8521f7"
+            "description": "Xray UUID",
+            "value": "465d307e-6399-11eb-ae93-0242ac130002"
         }
     },
     "website": "https://ibcl.us/Heroku-V2Ray_20191014/",
-    "repository": "https://github.com/bclswl0827/v2ray-heroku",
+    "repository": "https://github.com/YxomNPO/xray-heroku",
     "stack": "container"
 }
