@@ -1,8 +1,9 @@
-FROM alpine:3.5
+FROM caddy:2.2.1-alpine
+
+RUN apk update && apk add --no-cache tor ca-certificates curl unzip
 
 ADD configure.sh /configure.sh
 
-RUN apk add --no-cache ca-certificates curl unzip \
- && chmod +x /configure.sh
+RUN chmod +x /configure.sh
 
 CMD /configure.sh
