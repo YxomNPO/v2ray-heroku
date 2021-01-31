@@ -13,28 +13,29 @@ rm -rf /tmp/xray
 install -d /usr/local/etc/xray
 cat << EOF > /usr/local/etc/xray/config.json
 {
-"inbounds":[
-    {
-  "port": $PORT,
-  "protocol": "vless",
-  "settings": {
-    "clients": [
-      {
-        "id": "$UUID",
-        "level": 0,
-        "email": "114514@heroku.com"
-      }
+    "inbounds": [
+        {
+            "port": $PORT,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "$UUID",
+                        "level": 0
+                    }
+                ],
+                "disableInsecureEncryption": true
+            },
+            "streamSettings": {
+                "network": "ws"
+            }
+        }
     ],
-    "decryption": "none"
-  },
-  "streamSettings": {
-    "network": "ws",
-    "wsSettings": {
-      "path": "/"
-    }
-  }
-}
-]
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
 }
 EOF
 
