@@ -8,7 +8,7 @@ file_server
 @websockets_heroku {
 header Connection *Upgrade*
 header Upgrade    websocket
-path $WSPATH
+path /
 }
 reverse_proxy @websockets_heroku 127.0.0.1:14514
 EOF
